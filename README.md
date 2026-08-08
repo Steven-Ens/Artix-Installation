@@ -393,9 +393,24 @@ Go to ```~/Dotfiles/scripts/```:
 ```
 $ cd ~/Dotfiles/scripts/
 ```
-Run the following installation scripts:
+Run to install the dotfiles:
 ```
-$ sudo ./install_dotfiles.sh
+$ ./install_dotfiles.sh
+```
+Manually link the following to ```/root/```:
+```
+$ sudo ln -sfn ~/Dotfiles/.bash_profile /root/.bash_profile
+$ sudo ln -sfn ~/Dotfiles/.bashrc /root/.bashrc
+$ sudo ln -sfn ~/Dotfiles/.vimrc /root/.vimrc
+```
+Manually link the following to ```/etc/``` and ```/usr/```:
+```
+$ sudo mkdir -p /etc/pacman.d/hooks
+$ sudo ln -sfn ~/Dotfiles/etc/pacman.d/hooks/update_vim_plugins.hook /etc/pacman.d/hooks/update_vim_plugins.hook
+$ sudo ln -sfn ~/Dotfiles/usr/share/X11/xkb/symbols/pc /usr/share/X11/xkb/symbols/pc
+```
+Run to install Vim plugins:
+```
 $ ./install_vim_plugins.sh 
 ```
 Manually link ```~/.vim/colors/nord.vim``` to ```/root/```:
