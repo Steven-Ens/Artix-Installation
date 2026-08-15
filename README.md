@@ -458,7 +458,7 @@ $ npm install -g solhint
 ```
 
 ## Install Ledger Live
-* Download the AppImage from https://www.ledger.com/ledger-live/lld-signatures and go to the directory containing the downloaded AppImage:
+Download the AppImage from https://www.ledger.com/ledger-live/lld-signatures and go to the directory containing the downloaded AppImage:
 ```
 $ cd ~/Downloads
 ```
