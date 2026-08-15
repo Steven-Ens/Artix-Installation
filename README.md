@@ -452,13 +452,13 @@ $ npm install -g @nomicfoundation/solidity-language-server
 $ npm install -g solhint
 ```
 
+## Install solhint Globally
+```
+$ npm install -g solhint
+```
+
 ## Install Ledger Live
-* Download the AppImage from: https://www.ledger.com/ledger-live/lld-signatures
-* Install FUSE 2, which provides the libfuse.so.2 library required by the AppImage:
-```
-$ sudo pacman -S fuse2
-```
-Go to the directory containing the downloaded AppImage:
+* Download the AppImage from https://www.ledger.com/ledger-live/lld-signatures and go to the directory containing the downloaded AppImage:
 ```
 $ cd ~/Downloads
 ```
@@ -469,6 +469,26 @@ $ sha512sum ledger-live-desktop-<version>-linux-x86_64.AppImage
 If the hash matches, make the AppImage executable:
 ```
 $ chmod +x ledger-live-desktop-<version>-linux-x86_64.AppImage
+```
+Install FUSE 2, which provides the libfuse.so.2 library required by the AppImage:
+```
+$ sudo pacman -S fuse2
+```
+Test the AppImage:
+```
+$ ./ledger-live-desktop-<version>-linux-x86_64.AppImage
+```
+Create a local binary directory:
+```
+$ mkdir -p ~/.local/bin
+```
+Move and rename the AppImage:
+```
+$ mv ledger-live-desktop-<version>-linux-x86_64.AppImage ~/.local/bin/ledger-live
+```
+Run:
+```
+$ ledger-live
 ```
 
 ## Install ufw
