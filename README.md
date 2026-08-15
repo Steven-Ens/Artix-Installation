@@ -452,6 +452,25 @@ $ npm install -g @nomicfoundation/solidity-language-server
 $ npm install -g solhint
 ```
 
+## Install Ledger Live
+* Download the AppImage from: https://www.ledger.com/ledger-live/lld-signatures
+* Install FUSE 2, which provides the libfuse.so.2 library required by the AppImage:
+```
+$ sudo pacman -S fuse2
+```
+Go to the directory containing the downloaded AppImage:
+```
+$ cd ~/Downloads
+```
+Verify the SHA-512 checksum of the downloaded AppImage on: https://www.ledger.com/ledger-live/lld-signatures
+```
+$ sha512sum ledger-live-desktop-<version>-linux-x86_64.AppImage
+```
+If the hash matches, make the AppImage executable:
+```
+$ chmod +x ledger-live-desktop-<version>-linux-x86_64.AppImage
+```
+
 ## Install ufw
 ```
 $ sudo pacman -S ufw ufw-runit
@@ -706,17 +725,17 @@ $ mpv <file>
 ```
 
 ## Foundry
-Create an empty Foundry project with a generated ```.gitignore``` and ```.solhint.json```:
+Create an empty Foundry project with a generated ```.gitignore```, ```remappings.txt```, and ```.solhint.json```:
 ```
 $ new <project directory>
 ```
 Install OpenZeppelin contracts:
 ```
-$ forge install OpenZeppelin/openzeppelin-contracts
+$ forge install OpenZeppelin/openzeppelin-contracts --no-git
 ```
 If using OpenZeppelin's upgradeable contracts, this package also installs the standard OpenZeppelin contracts library as a dependency.
 ```
-$ forge install OpenZeppelin/openzeppelin-contracts-upgradeable
+$ forge install OpenZeppelin/openzeppelin-contracts-upgradeable --no-git
 ```
 Compile the project:
 ```
