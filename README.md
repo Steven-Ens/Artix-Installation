@@ -385,6 +385,23 @@ Verify:
 $ foundry --version
 ```
 
+## Install Rust
+```
+$ curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
+```
+Reload shell:
+```
+$ source ~/.bashrc
+```
+Verify:
+```
+$ cargo --version
+```
+Install code coverage crate:
+```
+$ cargo +stable install cargo-llvm-cov --locked
+```
+
 ## Install Dotfiles
 ```
 $ git clone https://github.com/Steven-Ens/Dotfiles
@@ -442,31 +459,31 @@ $ node -v
 $ npm -v
 ```
 
+## Install TypeScript Globally (Native LSP)
+```
+$ npm install -g typescript
+```
+Verify:
+```
+$ tsc --version
+```
+
 ## Install Solidity LSP Globally for coc.nvim
 ```
 $ npm install -g @nomicfoundation/solidity-language-server
+```
+Verify:
+```
+$ nomicfoundation-solidity-language-server --version
 ```
 
 ## Install solhint Globally
 ```
 $ npm install -g solhint
 ```
-
-## Install Rust
-```
-$ curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
-```
-Reload shell:
-```
-$ source ~/.bashrc
-```
 Verify:
 ```
-$ cargo --version
-```
-Install code coverage crate:
-```
-$ cargo +stable install cargo-llvm-cov --locked
+$ solhint --version
 ```
 
 ## Install Rust LSP for coc.nvim
