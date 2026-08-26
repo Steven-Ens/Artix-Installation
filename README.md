@@ -465,6 +465,10 @@ Verify:
 ```
 $ cargo --version
 ```
+Install Rust code coverage tool:
+```
+$ cargo +stable install cargo-llvm-cov --locked
+```
 
 ## Install Rust LSP for coc.nvim
 ```
@@ -815,9 +819,13 @@ Update:
 ```
 $ rustup update
 ```
-Create a new project:
+Create a new project without Git::
 ```
-$ cargo new <project directory>
+$ cargo new <project directory> --vcs none
+```
+Add a crate dependency:
+```
+$ cargo add <crate>
 ```
 Compile the project:
 ```
