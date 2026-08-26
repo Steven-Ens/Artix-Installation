@@ -464,7 +464,7 @@ Verify:
 ```
 $ cargo --version
 ```
-Install Rust code coverage tool:
+Install code coverage crate:
 ```
 $ cargo +stable install cargo-llvm-cov --locked
 ```
