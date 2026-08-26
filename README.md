@@ -452,14 +452,13 @@ $ npm install -g @nomicfoundation/solidity-language-server
 $ npm install -g solhint
 ```
 
-## Install solhint Globally
-```
-$ npm install -g solhint
-```
-
 ## Install Rust
 ```
 $ curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
+```
+Reload shell:
+```
+$ source ~/.bashrc
 ```
 Verify:
 ```
