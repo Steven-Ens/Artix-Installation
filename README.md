@@ -457,6 +457,24 @@ $ npm install -g solhint
 $ npm install -g solhint
 ```
 
+## Install Rust
+```
+$ curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
+```
+Verify:
+```
+$ cargo --version
+```
+
+## Install Rust LSP for coc.nvim
+```
+$ rustup component add rust-analyzer rust-src
+```
+Verify:
+```
+$ rust-analyzer --version
+```
+
 ## Install Ledger Live
 Download the AppImage from https://www.ledger.com/ledger-live/lld-signatures and go to the directory containing the downloaded AppImage:
 ```
@@ -745,6 +763,10 @@ $ mpv <file>
 ```
 
 ## Foundry
+Update:
+```
+$ foundryup
+```
 Create an empty Foundry project with a generated ```.gitignore```, ```remappings.txt```, and ```.solhint.json```:
 ```
 $ new <project directory>
@@ -769,6 +791,10 @@ Deploy a script to a network and verify the contract(s):
 ```
 $ forge script script/Deploy.s.sol --rpc-url $RPC_URL --verify --etherscan-api-key $ETHERSCAN_API_KEY --broadcast
 ```
+Remove build artifacts and cache:
+```
+$ forge clean
+```
 
 ## Cast
 Create a new wallet key pair:
@@ -782,6 +808,44 @@ $ cast balance <address> --rpc-url $RPC_URL
 Get the current block number:
 ```
 $ cast block-number --rpc-url $RPC_URL
+```
+
+## Rust
+Update:
+```
+$ rustup update
+```
+Create a new project:
+```
+$ cargo new <project directory>
+```
+Compile the project:
+```
+$ cargo build
+```
+Compile and run the project:
+```
+$ cargo run
+```
+Check whether the project compiles without creating a binary:
+```
+$ cargo check
+```
+Run tests:
+```
+$ cargo test
+```
+Run tests and show printed output:
+```
+$ cargo test -- --nocapture
+```
+Build an optimized release:
+```
+$ cargo build --release
+```
+Clean generated build files:
+```
+$ cargo clean
 ```
 
 # Before the First System Update
